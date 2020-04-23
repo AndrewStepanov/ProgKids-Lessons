@@ -1,4 +1,4 @@
-https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/2
+#https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/2
 import mc
 from mc import world, player
 
