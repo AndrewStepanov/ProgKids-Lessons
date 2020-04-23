@@ -66,3 +66,43 @@ while True:
 					one["column"][0],
 					6,
 					one["column"][2])
+					
+					
+					
+# https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/5
+# https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/6
+import mc
+from mc import world, player
+
+teleports = [
+	{"column": [1,0,3], "type": 1},
+	{"column": [5,0,5], "type": 5}
+]
+
+for one in teleports:
+	world.buildColumn(
+		one["column"][0],
+		one["column"][1],
+		one["column"][2],
+		5,
+		one["type"]
+		)
+	
+	world.setBlock(
+		one["column"][0],
+		-1,
+		one["column"][2]+1,
+		one["type"]
+		)
+	
+while True:
+	for one in teleports:
+		x,y,z = player.getPos()
+		
+		if x == one["column"][0] and \
+			y == 0 and \
+			z == one["column"][2] + 1:
+				player.setPos(
+					one["column"][0],
+					6,
+					one["column"][2])
