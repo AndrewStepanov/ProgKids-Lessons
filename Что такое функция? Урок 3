@@ -28,6 +28,8 @@ while True:
 		z == teleports["block"][2]:
 			player.setPos(0,6,0)
 
+
+
 # Ссылка на задание https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/3
 # Ссылка на задание https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/4
 
@@ -68,9 +70,12 @@ while True:
 					one["column"][2])
 					
 					
-					
+
+
+
 # https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/5
 # https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/6
+
 import mc
 from mc import world, player
 
