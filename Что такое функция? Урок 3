@@ -1,4 +1,5 @@
-#https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/2
+# Ссылка на задание https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/2
+
 import mc
 from mc import world, player
 
@@ -26,3 +27,42 @@ while True:
 		y == teleports["block"][1] + 1 and \
 		z == teleports["block"][2]:
 			player.setPos(0,6,0)
+
+# Ссылка на задание https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/3
+# Ссылка на задание https://app.progkids.com/i/gui/code/5d331bf2bcab0a1f85c4baba/4
+
+import mc
+from mc import world, player
+
+teleports = [
+	{"column": [1,0,3], "block": [1,-1,4], "type": 1},
+	{"column": [5,0,5], "block": [5,-1,6], "type": 5}
+]
+
+for one in teleports:
+	world.buildColumn(
+		one["column"][0],
+		one["column"][1],
+		one["column"][2],
+		5,
+		one["type"]
+		)
+	
+	world.setBlock(
+		one["block"][0],
+		one["block"][1],
+		one["block"][2],
+		one["type"]
+		)
+	
+while True:
+	for one in teleports:
+		x,y,z = player.getPos()
+		
+		if x == one["block"][0] and \
+			y == one["block"][1] + 1 and \
+			z == one["block"][2]:
+				player.setPos(
+					one["column"][0],
+					6,
+					one["column"][2])
